@@ -1,0 +1,210 @@
+
+.header {
+  width: 100%;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+
+  &__benefits {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 12px;
+    font-size: 12px;
+    color: #666;
+  }
+
+  &__main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #291b52;
+  }
+
+  &__logo-highlight {
+    color: #ffcc00;
+  }
+
+  &__search {
+    display: flex;
+    flex: 1;
+    max-width: 500px;
+    background: #f6f6f6;
+    border-radius: 8px;
+    overflow: hidden;
+
+    input {
+      flex: 1;
+      min-width: 0;
+      border: none;
+      background: transparent;
+      padding: 14px;
+      font: inherit;
+    }
+
+    button {
+      border: none;
+      padding: 0 16px;
+      cursor: pointer;
+      background: #ededed;
+      font: inherit;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 13px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 14px;
+    border-top: 1px solid #eee;
+
+    a {
+      color: #666;
+      text-decoration: none;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      &:hover {
+        color: #3442b5;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    &__benefits {
+      display: none;
+    }
+
+    &__main {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 16px;
+    }
+
+    &__logo {
+      grid-column: 2;
+      font-size: 23px;
+    }
+
+    &__actions {
+      grid-column: 3;
+      gap: 8px;
+      font-size: 12px;
+
+      span:not(:last-child) {
+        display: none;
+      }
+    }
+
+    &__search {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      width: 100%;
+      max-width: none;
+
+      input {
+        padding: 12px;
+        font-size: 12px;
+      }
+
+      button {
+        padding: 0 12px;
+        font-size: 12px;
+      }
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}
+
+/* Botão hambúrguer: oculto no computador */
+.header__menu-button {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #291b52;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Layout para celulares */
+@media (max-width: 768px) {
+  .header {
+    &__menu-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-column: 1;
+      grid-row: 1;
+      width: 32px;
+      height: 36px;
+    }
+
+    &__logo {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: start;
+      text-decoration: none;
+    }
+
+    &__actions {
+      grid-column: 3;
+      grid-row: 1;
+      justify-self: end;
+    }
+
+    &__search {
+      grid-column: 1 / -1;
+      grid-row: 2;
+    }
+
+    /* Menu fechado */
+    &__nav {
+      display: none;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px 16px 16px;
+      background: #fff;
+      border-top: 1px solid #eee;
+
+      a {
+        display: block;
+        padding: 12px 4px;
+        border-bottom: 1px solid #eee;
+        color: #291b52;
+        text-decoration: none;
+        font-size: 13px;
+      }
+    }
+
+    /* Menu aberto */
+    &__nav--open {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+
+.partners {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  &__card {
+    min-height: 260px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    overflow: hidden;
+  }
+
+  &__content {
+    color: white;
+    max-width: 260px;
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      padding: 12px 28px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background: #e6b800;
+      }
+
+      &:focus-visible {
+        outline: 3px solid white;
+        outline-offset: 3px;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .partners__grid {
+    grid-template-columns: 1fr;
+  }
+}

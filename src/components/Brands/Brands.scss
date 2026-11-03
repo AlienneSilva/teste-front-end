@@ -1,0 +1,51 @@
+
+.brands {
+  max-width: 1250px;
+  margin: 48px auto;
+  padding: 0 20px;
+
+  h2 {
+    color: #3442b5;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__item {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 115px;
+      max-width: 75%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .brands__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brands__item {
+    width: 140px;
+    height: 140px;
+  }
+}
