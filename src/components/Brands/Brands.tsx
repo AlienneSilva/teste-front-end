@@ -1,4 +1,3 @@
-
 import brandLogo from '../../assets/brands/econverse.svg'
 import './Brands.scss'
 

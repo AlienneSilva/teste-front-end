@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import type { Product } from '../../types/Product'
 import { ProductCard } from '../ProductCard/ProductCard'
@@ -10,27 +9,13 @@ type ProductListProps = {
   showViewAll?: boolean
 }
 
-const categories = [
-  'CELULAR',
-  'ACESSÓRIOS',
-  'TABLETS',
-  'NOTEBOOKS',
-  'TVS',
-  'VER TODOS',
-]
+const categories = ['CELULAR', 'ACESSÓRIOS', 'TABLETS', 'NOTEBOOKS', 'TVS', 'VER TODOS']
 
-export function ProductList({
-  products,
-  onSelect,
-  showViewAll = false,
-}: ProductListProps) {
+export function ProductList({ products, onSelect, showViewAll = false }: ProductListProps) {
   const [startIndex, setStartIndex] = useState(0)
   const [activeCategory, setActiveCategory] = useState('CELULAR')
 
-  const visibleProducts = products.slice(
-    startIndex,
-    startIndex + 4
-  )
+  const visibleProducts = products.slice(startIndex, startIndex + 4)
 
   const canGoBack = startIndex > 0
   const canGoForward = startIndex < products.length - 4
@@ -40,32 +25,25 @@ export function ProductList({
   }
 
   function next() {
-    setStartIndex((current) =>
-      Math.min(Math.max(0, products.length - 4), current + 1)
-    )
+    setStartIndex((current) => Math.min(Math.max(0, products.length - 4), current + 1))
   }
 
   return (
-<section className="product-list" aria-label="Produtos relacionados">
+    <section className="product-list" aria-label="Produtos relacionados">
       <h2>Produtos relacionados</h2>
 
-{showViewAll && (
-  <a href="#produtos" className="product-list__view-all">
-    Ver todos
-  </a>
-)}
+      {showViewAll && (
+        <a href="#produtos" className="product-list__view-all">
+          Ver todos
+        </a>
+      )}
 
-      <div
-        className="product-list__categories"
-        aria-label="Categorias de produtos"
-      >
+      <div className="product-list__categories" aria-label="Categorias de produtos">
         {categories.map((category) => (
           <button
             key={category}
             type="button"
-            className={`product-list__category ${
-              activeCategory === category ? 'active' : ''
-            }`}
+            className={`product-list__category ${activeCategory === category ? 'active' : ''}`}
             onClick={() => setActiveCategory(category)}
             aria-pressed={activeCategory === category}
           >

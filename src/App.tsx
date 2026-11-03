@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import { getProducts } from './services/products'
 import type { Product } from './types/Product'
@@ -18,8 +17,7 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  const [selectedProduct, setSelectedProduct] =
-    useState<Product | null>(null)
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
 
   useEffect(() => {
     async function loadProducts() {
@@ -51,23 +49,14 @@ function App() {
         {error && <p role="alert">{error}</p>}
 
         {/* Primeira vitrine */}
-        {!loading && !error && (
-          <ProductList
-            products={products}
-            onSelect={setSelectedProduct}
-          />
-        )}
+        {!loading && !error && <ProductList products={products} onSelect={setSelectedProduct} />}
 
         {/* Primeiro conjunto de banners */}
         <Partners />
 
         {/* Segunda vitrine */}
         {!loading && !error && (
-          <ProductList
-            products={products}
-            onSelect={setSelectedProduct}
-            showViewAll={true}
-          />
+          <ProductList products={products} onSelect={setSelectedProduct} showViewAll={true} />
         )}
 
         {/* Segundo conjunto de banners */}
@@ -78,23 +67,16 @@ function App() {
 
         {/* Terceira vitrine */}
         {!loading && !error && (
-          <ProductList
-            products={products}
-            onSelect={setSelectedProduct}
-            showViewAll={true}
-          />
+          <ProductList products={products} onSelect={setSelectedProduct} showViewAll={true} />
         )}
       </main>
       <Newsletter />
 
-<Footer />
+      <Footer />
 
       {/* Modal compartilhado pelas vitrines */}
       {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
+        <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
       )}
     </>
   )

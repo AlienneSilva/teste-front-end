@@ -1,28 +1,27 @@
-
 .product-list {
   max-width: 1320px;
   margin: 48px auto;
   padding: 0 16px;
 
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
 
-  color: #3442b5;
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 16px;
+    color: #3442b5;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 16px;
 
-  &::before,
-  &::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background-color: #e5e5e5;
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
   }
-}
 
   // Abas de categorias
   &__categories {
@@ -41,7 +40,9 @@ h2 {
     color: #555;
     font-size: 12px;
     cursor: pointer;
-    transition: color 0.2s, background 0.2s;
+    transition:
+      color 0.2s,
+      background 0.2s;
 
     &:last-child {
       border-right: none;
@@ -63,18 +64,18 @@ h2 {
     }
   }
   .product-list__view-all {
-  display: block;
-  width: fit-content;
-  margin: -20px auto 24px;
-  color: #333;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: -20px auto 24px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
-}
 
   // Carrossel existente
   &__carousel {
@@ -163,7 +164,6 @@ h2 {
     display: none;
   }
 }
-
 
 @media (max-width: 600px) {
   .product-list {

@@ -1,4 +1,3 @@
-
 import './Footer.scss'
 
 import logo from '../../assets/footer/logo.svg'
@@ -17,11 +16,7 @@ const columns = [
   },
   {
     title: 'Termos',
-    items: [
-      'Termos e Condições',
-      'Política de Privacidade',
-      'Troca e Devolução',
-    ],
+    items: ['Termos e Condições', 'Política de Privacidade', 'Troca e Devolução'],
   },
 ]
 
@@ -34,10 +29,7 @@ export default function Footer() {
             <img src={logo} alt="Econverse" />
           </div>
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit.
-          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
           <div className="footer__social">
             <a
@@ -71,10 +63,7 @@ export default function Footer() {
 
         <div className="footer__columns">
           {columns.map((column) => (
-            <div
-              className="footer__column"
-              key={column.title}
-            >
+            <div className="footer__column" key={column.title}>
               <h3>{column.title}</h3>
 
               {column.items.map((item) => (
@@ -85,9 +74,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer__bottom">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </div>
+      <div className="footer__bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
     </footer>
   )
 }

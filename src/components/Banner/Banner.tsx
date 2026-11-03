@@ -1,4 +1,3 @@
-
 import bannerImage from '../../assets/banner-black-friday.png'
 import './Banner.scss'
 
@@ -10,9 +9,7 @@ function Banner() {
       style={{ backgroundImage: `url(${bannerImage})` }}
     >
       <div className="banner__content">
-        <h1 id="banner-title">
-          Venha conhecer nossas promoções
-        </h1>
+        <h1 id="banner-title">Venha conhecer nossas promoções</h1>
 
         <p>
           <strong>50% Off</strong> nos produtos

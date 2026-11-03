@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import './Newsletter.scss'
@@ -12,9 +11,7 @@ export default function Newsletter() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    setMessage(
-      `Obrigado, ${name}! Formulário validado com sucesso.`
-    )
+    setMessage(`Obrigado, ${name}! Formulário validado com sucesso.`)
 
     setName('')
     setEmail('')
@@ -25,12 +22,9 @@ export default function Newsletter() {
     <section className="newsletter" aria-labelledby="newsletter-title">
       <div className="newsletter__container">
         <div className="newsletter__info">
-          <h2 id="newsletter-title">
-            Inscreva-se na nossa newsletter
-          </h2>
+          <h2 id="newsletter-title">Inscreva-se na nossa newsletter</h2>
           <p>
-            Assine a nossa newsletter e receba as novidades
-            e conteúdos exclusivos da Econverse.
+            Assine a nossa newsletter e receba as novidades e conteúdos exclusivos da Econverse.
           </p>
         </div>
 

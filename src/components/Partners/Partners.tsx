@@ -1,4 +1,3 @@
-
 import parceirosBg from '../../assets/partners/parceiros-bg.png'
 import './Partners.scss'
 
@@ -8,12 +7,12 @@ const partners = [
 ]
 
 export default function Partners() {
-function handleConfira() {
-  document.getElementById('produtos')?.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  })
-}
+  function handleConfira() {
+    document.getElementById('produtos')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
 
   return (
     <section className="partners" aria-label="Parceiros">
@@ -33,15 +32,9 @@ function handleConfira() {
             <div className="partners__content">
               <h2>{partner.title}</h2>
 
-              <p>
-                Lorem ipsum dolor sit amet,
-                consectetur.
-              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur.</p>
 
-              <button
-                type="button"
-                onClick={handleConfira}
-              >
+              <button type="button" onClick={handleConfira}>
                 CONFIRA
               </button>
             </div>

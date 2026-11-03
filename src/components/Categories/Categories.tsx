@@ -1,4 +1,3 @@
-
 import './Categories.scss'
 
 import tecnologia from '../../assets/icons/tecnologia.svg'
@@ -28,9 +27,7 @@ export default function Categories() {
             <div className={`categories__icon ${index === 0 ? 'categories__icon--active' : ''}`}>
               <img src={category.icon} alt="" />
             </div>
-            <span className={index === 0 ? 'categories__name--active' : ''}>
-              {category.name}
-            </span>
+            <span className={index === 0 ? 'categories__name--active' : ''}>{category.name}</span>
           </div>
         ))}
       </div>

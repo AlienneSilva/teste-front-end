@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import './Header.scss'
 
@@ -29,11 +28,7 @@ function Header() {
           <span className="header__logo-highlight">eco</span>nverse
         </a>
 
-        <form
-          className="header__search"
-          role="search"
-          onSubmit={(event) => event.preventDefault()}
-        >
+        <form className="header__search" role="search" onSubmit={(event) => event.preventDefault()}>
           <input
             type="search"
             placeholder="O que você está buscando?"
